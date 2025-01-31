@@ -11,18 +11,21 @@ for (let i = 0; i < 16; i++){
         newDiv.classList.add("square")
         newDiv.classList.add("row" + i)
         newDiv.classList.add("column" + j)
-        newDiv.setAttribute("opacity", "0.0")
+        let color = "rgb(" + (Math.random() * 255) + ", " + 
+                            (Math.random() * 255) + ", " + 
+                            (Math.random() * 255) + ")"
+        newDiv.style.backgroundColor = color;
 
         //newDiv.addEventListener("mouseover", function (e) {
 
-        newDiv.addEventListener("click", function (e) {
-            e.target.style.background = "blue";
-
+        newDiv.addEventListener("mouseover", function (e) {
             const style = window.getComputedStyle(newDiv);
             let opacity = style.getPropertyValue("opacity");
             newOpacity = parseFloat(opacity) + 0.1;
             e.target.style.opacity = newOpacity;
         });
+
+
 
         row.appendChild(newDiv)
     }
