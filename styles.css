@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+}
+
+.square{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+}
